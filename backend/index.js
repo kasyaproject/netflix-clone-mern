@@ -11,7 +11,14 @@ import moviesRoutes from "./routes/movie.routes.js";
 const app = express();
 
 dotenv.config();
-app.use(cors());
+// Konfigurasikan CORS
+const corsOptions = {
+  origin: process.env.FRONTEND_URL, // Ambil dari .env
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 
 // Load YAML file
 const swaggerDocs = YAML.load("./swagger.yaml");
