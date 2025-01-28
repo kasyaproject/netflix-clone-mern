@@ -1,5 +1,5 @@
 import Jumbotron from "@mods/BrowsePage/Jumbotron";
-import BrowseLayouts from "@layouts/BrowseLayouts";
+import BrowseLayouts from "@/components/Layouts/BrowseLayouts";
 import MovieList from "@mods/Common/MovieList";
 import ModalMovie from "@mods/Common/ModalMovie";
 import Footer from "@mods/BrowsePage/Footer";
