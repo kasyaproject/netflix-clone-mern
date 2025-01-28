@@ -15,11 +15,11 @@ import { FaPlayCircle } from "react-icons/fa";
 import { GoCheckCircle, GoChevronDown, GoPlusCircle } from "react-icons/go";
 import { AiOutlineLike } from "react-icons/ai";
 
+import Skeleton from "./Skeleton.jsx";
 import { runtimeFormatter } from "@/utils/runtimeForamter";
 import { getVideoURL } from "@/utils/getVideoURL";
 import { getMoviesDetail } from "@/utils/getMovieDetail";
 import { getGenres } from "@/utils/getGenres";
-import Skeleton from "./skeleton";
 import { apiInstanceExpress } from "@/utils/apiInstance";
 import { toast } from "react-toastify";
 import { checkFavoriteMovies } from "@/utils/checkFavoriteMovies";
