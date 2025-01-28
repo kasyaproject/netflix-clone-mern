@@ -1,8 +1,8 @@
 import { useAtom } from "jotai";
 import { LIST_CONTENT_EN, LIST_CONTENT_ID } from "@/constants/listContent";
-import EachUtils from "@/utils/EachUtils";
-import SectionLayout from "@layouts/SectionLayout";
 import { languageAtom } from "@/jotai/atoms";
+import EachUtils from "@/utils/EachUtils";
+import SectionLayout from "@/components/Layouts/SectionLayout";
 
 const SectionEnjoy = () => {
   const [language] = useAtom(languageAtom);
