@@ -4,7 +4,7 @@ import { idMovieAtom, isFetchingAtom } from "@/jotai/atoms";
 import { getMoviesByType } from "@/utils/getMoviesByType";
 
 import EachUtils from "@/utils/EachUtils";
-import CaroueselLayouts from "@layouts/CaroueselLayouts";
+import CaroueselLayouts from "@/components/Layouts/CaroueselLayouts";
 import MovieCard from "@mods/Common/MovieCard";
 
 const MovieList = ({ title, moviesType }) => {
