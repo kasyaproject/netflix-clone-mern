@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        // agar pada saat di hover bisa auto import
+        "paths": {
+            "@/*": ["./src/*"],
+            "@mods/*": ["./src/components/modules/*"],
+            "@layouts/*": ["./src/components/layouts/*"],
+        }
+    }
+}

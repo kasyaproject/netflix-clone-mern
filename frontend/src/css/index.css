@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-950 text-white; /* Background slate-950 dan teks putih untuk kontras */
+}
+
+.modal-box::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar di browser berbasis Webkit */
+}
+.modal-box {
+  -ms-overflow-style: none; /* Sembunyikan scrollbar di IE dan Edge */
+  scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+}
+
+img,
+video {
+  object-fit: cover;
+}
+
+iframe {
+  pointer-events: none; /* Membatasi interaksi pengguna */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

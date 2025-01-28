@@ -1,0 +1,144 @@
+openapi: 3.1.0
+info:
+  title: Netflix Clone | MERN + API
+  description: Netflix Clone using MERN Stack and Tmdb API.
+paths:
+  # GET FAVORITE MOVIES
+  /api/movies/get-favorite/{email}/{token}:
+    get:
+      summary: Get favorite movies of a user
+      parameters:
+        - in: path
+          name: email
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: token
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success Geting Favorite Movies
+        401:
+          description: Failed Geting Favorite Movies, Unauthorized
+
+  # ADD/REMOVE FAVORITE MOVIES
+  /api/movies/add-favorite:
+    post:
+      summary: Add/Remove a movie to favorite
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: andika14045@gmail.com
+                token:
+                  type: string
+                  example: token123
+                data:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    title:
+                      type: integer
+                      example: Naruto
+                    description:
+                      type: integer
+                      example: Anak Yatim
+      responses:
+        200:
+          description: Success in adding or removing movie from favorites
+        401:
+          description: Failed in adding/removing movie from favorites, Unauthorized
+
+  # SIGN IN APP
+  /api/auth/sign-in:
+    post:
+      summary: Sign in to app Netflix Clone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: andika14045@gmail.com
+                password:
+                  type: string
+                  example: andika14045
+                token:
+                  type: string
+                  example: token123
+      responses:
+        200:
+          description: Log In Successfull
+        401:
+          description: Failed to Log In
+
+  # SIGN OUT APP
+  /api/auth/sign-out:
+    delete:
+      summary: Sign out from app Netflix Clone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  example: token123
+                email:
+                  type: string
+                  example: andika14045@gmail.com
+      responses:
+        200:
+          description: Log Out Successfull
+        401:
+          description: Failed to Log Out
+
+  # SIGN UP APP
+  /api/auth/sign-up:
+    post:
+      summary: Sign up to app Netflix Clone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Andika
+                username:
+                  type: string
+                  example: andika14045
+                email:
+                  type: string
+                  example: andika14045@gmail.com
+                password:
+                  type: string
+                  example: password123
+                phone:
+                  type: string
+                  example: 08123456789
+                token:
+                  type: string
+                  example: null
+      responses:
+        200:
+          description: Log Up Successfull
+        401:
+          description: Failed to Log Up
