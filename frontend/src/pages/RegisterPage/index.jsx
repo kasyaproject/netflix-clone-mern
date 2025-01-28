@@ -4,9 +4,8 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { auth, db } from "@/utils/firebase";
+import { auth } from "@/utils/firebase";
 import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";

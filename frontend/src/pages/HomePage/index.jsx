@@ -1,4 +1,4 @@
-import DefaultLayout from "@layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Footer from "@/components/modules/HomePage/Footer";
 import JumboTron from "@/components/modules/HomePage/JumboTron";
 import SectionBenefit from "@/components/modules/HomePage/SectionContents/SectionBenefit";
