@@ -12,13 +12,7 @@ const app = express();
 
 dotenv.config();
 // Konfigurasikan CORS
-const corsOptions = {
-  origin: process.env.FRONTEND_URL, // Ambil dari .env
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
-
-app.use(cors(corsOptions));
+app.use(cors({ origin: "*" }));
 
 // Load YAML file
 const swaggerDocs = YAML.load("./swagger.yaml");
